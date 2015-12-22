@@ -1,5 +1,4 @@
 - view: sf_account
-  sql_table_name: public.sf_account
   fields:
 
   - dimension: id
@@ -180,7 +179,7 @@
     sql: ${TABLE}.intro_meeting_date_c
 
   - dimension: is_fortune_c
-    sql: ${TABLE}.is_fortune_c
+    sql: ${TABLE}.isfortune_c
 
   - dimension: isdeleted
     sql: ${TABLE}.isdeleted
@@ -471,4 +470,3 @@
   - measure: count
     type: count
     drill_fields: [id, name]
-

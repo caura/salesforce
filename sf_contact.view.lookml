@@ -1,5 +1,4 @@
 - view: sf_contact
-  sql_table_name: public.sf_contact
   fields:
 
   - dimension: id

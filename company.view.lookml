@@ -4,6 +4,7 @@
 # createddate => created_date
 # iswon => boolean
 # accountid => account_id
+# annualrevenue => annual_revenue
 # convertedcontactid => converted_contact_id
 - view: company
   derived_table:
@@ -111,8 +112,8 @@
 #                               , opportunity.id AS opportunity_id
 #                               , opportunity.createddate AS opportunity_created_date
 #                               , opportunity.closedate AS opportunity_closed_date
-#                               , opportunity.iswon AS opportunity_is_won
-#                               , opportunity.isclosed AS opportunity_is_closed
+#                               , opportunity.iswon AS opportunity_iswon
+#                               , opportunity.isclosed AS opportunity_isclosed
 #                             FROM public.sf_lead as lead
 #                             LEFT JOIN public.sf_account as account ON lead.convertedaccountid = account.id
 #                             LEFT JOIN public.sf_contact as contact

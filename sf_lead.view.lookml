@@ -1,6 +1,8 @@
+# createddate -> created_at
 - view: sf_lead
-  sql_table_name: public.sf_lead
   fields:
+
+# DIMENSIONS #
 
   - dimension: id
     primary_key: true

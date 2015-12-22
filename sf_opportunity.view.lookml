@@ -1,5 +1,4 @@
 - view: sf_opportunity
-  sql_table_name: public.sf_opportunity
   fields:
 
   - dimension: id
@@ -173,11 +172,11 @@
   - dimension: infer_score_snapshot_c
     sql: ${TABLE}.infer_score_snapshot_c
 
-  - dimension: is_cancelled_c
-    sql: ${TABLE}.is_cancelled_c
+  - dimension: iscancelled_c
+    sql: ${TABLE}.iscancelled_c
 
   - dimension: is_referral_qualified_c
-    sql: ${TABLE}.is_referral_qualified_c
+    sql: ${TABLE}.isreferral_qualified_c
 
   - dimension: isclosed
     sql: ${TABLE}.isclosed
@@ -351,4 +350,3 @@
   - measure: count
     type: count
     drill_fields: [id, name, forecastcategoryname, stagename]
-
