@@ -5,7 +5,7 @@
       SELECT *
       FROM public.sf_task
       WHERE type = 'Intro Meeting'
-    sql_trigger_value: SELECT COUNT(*) FROM public.sf_task
+    persist_for: 1 hours
     sortkeys: [accountid]
   fields:
   

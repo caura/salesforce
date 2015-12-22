@@ -7,7 +7,7 @@
       FROM public.sf_opportunity AS opportunity
       LEFT JOIN public.sf_account AS account
       ON account.id = opportunity.accountid    
-    sql_trigger_value: SELECT COUNT(*) FROM public.sf_opportunity
+    persist_for: 1 hours
     sortkeys: [company_id]
     distkey: company_id
 

@@ -13,7 +13,7 @@
         , LAST_VALUE(email) OVER(PARTITION BY company ORDER BY createddate ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS last_lead_email
         , LAST_VALUE(createddate) OVER(PARTITION BY company ORDER BY createddate ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS last_lead_created_date
       FROM public.sf_lead
-    sql_trigger_value: SELECT COUNT(*) FROM public.sf_lead
+    persist_for: 1 hours
     sortkeys: [company_id]
     distkey: company_id
   fields:

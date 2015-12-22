@@ -5,7 +5,7 @@
       SELECT *
         , MD5(TRIM(BOTH ' ' FROM REGEXP_REPLACE(LOWER(name), '([[:space:]]|\\,)+([iInNcC]|[lLcC]).*$', ''))) AS company_id
       FROM public.sf_account
-    sql_trigger_value: SELECT COUNT(*) FROM public.sf_account
+    persist_for: 1 hours
     indexes: [createddate, company_id]     # using indexes for interleaved sort keys
     distkey: company_id
   fields:

@@ -34,7 +34,7 @@
       FROM temp_company
       LEFT JOIN temp_account
       ON temp_company.company_id = temp_account.company_id
-    sql_trigger_value: SELECT COUNT(*) FROM public.lead
+    persist_for: 1 hours
     indexes: [company_id, account_id]
   fields:
 
